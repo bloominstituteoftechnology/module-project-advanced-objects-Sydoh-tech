@@ -113,7 +113,21 @@
     //   minusThree.count() // returns null
     //   minusThree.count() // returns null
     class CountDown {
-
+      constructor(numberCount){
+        this.valuesCounted = numberCount
+      }
+      count(){
+        if (this.valuesCounted > 0){
+          const result = `${this.valuesCounted}!`;
+          this.valuesCounted--;
+          return result;
+      } else if (this.valuesCounted === 0) {
+          this.valuesCounted--;
+          return "Liftoff!";
+      } else {
+          return null;
+        }
+      }
     }
 
     // 🧪 TESTS, do not work below this line
